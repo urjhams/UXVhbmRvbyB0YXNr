@@ -10,6 +10,8 @@ import XCTest
 
 final class QuandooTaskUserViewTests: XCTestCase {
   
+  let controller = UsersViewController()
+  
   override func setUpWithError() throws {
     // Put setup code here. This method is called before the invocation of each test method in the class.
     try super.setUpWithError()
@@ -18,6 +20,19 @@ final class QuandooTaskUserViewTests: XCTestCase {
   override func tearDownWithError() throws {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     try super.tearDownWithError()
+  }
+  
+  func testEmptyPostListAtInitial() {
+    
+  }
+  
+  func testLoadPostList() {
+    
+    // condition
+    controller.loadViewIfNeeded()
+    
+    // assert
+    
   }
 
 }
@@ -55,7 +70,7 @@ final class QuandooTaskFetchingTests: XCTestCase {
     
     let result = try await service.getUsers()
     
-    if !result.users.isEmpty {
+    if !result.isEmpty {
       expectation.fulfill()
     }
     

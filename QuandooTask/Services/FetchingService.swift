@@ -2,7 +2,7 @@ import Networking
 import Foundation
 
 public protocol Fetching {
-  func getUsers() async throws -> UserListViewModel
+  func getUsers() async throws -> [User]
   func getPosts(userId: Int) async throws -> [Post]
 }
 
@@ -12,10 +12,9 @@ public class FetchingService {
 }
 
 extension FetchingService: Fetching {
-  public func getUsers() async throws -> UserListViewModel {
+  public func getUsers() async throws -> [User] {
     let request = Request(from: "https://jsonplaceholder.typicode.com/users", as: .get)
-    let users = try await Networking.shared.getObject([User].self, from: request)
-    return .init(from: users)
+    return try await Networking.shared.getObject([User].self, from: request)
   }
   
   public func getPosts(userId: Int) async throws -> [Post] {
