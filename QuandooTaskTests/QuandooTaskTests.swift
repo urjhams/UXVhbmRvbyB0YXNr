@@ -8,8 +8,35 @@
 import XCTest
 @testable import QuandooTask
 
-final class QuandooTaskTests: XCTestCase {
+final class QuandooTaskUserViewTests: XCTestCase {
   
+  override func setUpWithError() throws {
+    // Put setup code here. This method is called before the invocation of each test method in the class.
+    try super.setUpWithError()
+  }
+  
+  override func tearDownWithError() throws {
+    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    try super.tearDownWithError()
+  }
+
+}
+
+final class QuandooTaskPostViewTests: XCTestCase {
+  
+  override func setUpWithError() throws {
+    // Put setup code here. This method is called before the invocation of each test method in the class.
+    try super.setUpWithError()
+  }
+  
+  override func tearDownWithError() throws {
+    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    try super.tearDownWithError()
+  }
+  
+}
+
+final class QuandooTaskFetchingTests: XCTestCase {
   let service = FetchingService.shared
   
   override func setUpWithError() throws {
