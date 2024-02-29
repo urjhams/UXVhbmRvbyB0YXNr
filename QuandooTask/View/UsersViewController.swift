@@ -22,6 +22,8 @@ class UsersViewController: UIViewController {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
     view.backgroundColor = .systemBackground
+    navigationController?.navigationBar.prefersLargeTitles = true
+    title = "Users"
     setupTableView()
     fetchData()
   }
@@ -63,12 +65,13 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
-    guard let userId = viewModel.users[safe: indexPath.row]?.id else {
+    guard let user = viewModel.users[safe: indexPath.row] else {
       return
     }
-    let postView = PostView(userId: userId)
+    let postView = PostView(userId: user.id)
     let hostController = UIHostingController(rootView: postView)
-    present(hostController, animated: true)
+    hostController.title = user.name
+    navigationController?.pushViewController(hostController, animated: true)
   }
 }
 
