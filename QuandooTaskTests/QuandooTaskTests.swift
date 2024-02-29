@@ -40,7 +40,7 @@ final class QuandooTaskTests: XCTestCase {
     
     let result = try await service.getPosts(userId: 1)
     
-    if !result.posts.isEmpty {
+    if !result.isEmpty {
       expectation.fulfill()
     }
     
