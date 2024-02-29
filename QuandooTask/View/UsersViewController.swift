@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class UsersViewController: UIViewController {
   
@@ -62,7 +63,12 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
-    // TODO: show swiftUI Post view of the user
+    guard let userId = viewModel.users[safe: indexPath.row]?.id else {
+      return
+    }
+    let postView = PostView(userId: userId)
+    let hostController = UIHostingController(rootView: postView)
+    present(hostController, animated: true)
   }
 }
 

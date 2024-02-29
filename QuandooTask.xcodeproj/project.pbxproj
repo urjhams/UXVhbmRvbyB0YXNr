@@ -14,6 +14,7 @@
 		4FE080332B9139AF00438E0A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE080322B9139AF00438E0A /* Extensions.swift */; };
 		4FE080352B913D3800438E0A /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE0802F2B9135EF00438E0A /* UserCell.swift */; };
 		4FE080362B913D4900438E0A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE080322B9139AF00438E0A /* Extensions.swift */; };
+		4FE080382B91427600438E0A /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE080372B91427600438E0A /* PostView.swift */; };
 		4FE5A2362B9116FB00469D66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5A2352B9116FB00469D66 /* AppDelegate.swift */; };
 		4FE5A2382B9116FB00469D66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5A2372B9116FB00469D66 /* SceneDelegate.swift */; };
 		4FE5A23F2B9116FD00469D66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FE5A23E2B9116FD00469D66 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		4FE0802F2B9135EF00438E0A /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		4FE080322B9139AF00438E0A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4FE080372B91427600438E0A /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		4FE5A2322B9116FB00469D66 /* QuandooTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuandooTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FE5A2352B9116FB00469D66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FE5A2372B9116FB00469D66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			children = (
 				4FE5A2BD2B9122CB00469D66 /* UsersViewController.swift */,
 				4FE0802F2B9135EF00438E0A /* UserCell.swift */,
+				4FE080372B91427600438E0A /* PostView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				4FE5A2382B9116FB00469D66 /* SceneDelegate.swift in Sources */,
 				4FE5A2BA2B91227E00469D66 /* User.swift in Sources */,
 				4FE5A2B82B91227700469D66 /* Post.swift in Sources */,
+				4FE080382B91427600438E0A /* PostView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
