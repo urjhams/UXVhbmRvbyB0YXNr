@@ -12,6 +12,8 @@
 		4FE0802E2B912DF300438E0A /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5A2B72B91227700469D66 /* Post.swift */; };
 		4FE080302B9135EF00438E0A /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE0802F2B9135EF00438E0A /* UserCell.swift */; };
 		4FE080332B9139AF00438E0A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE080322B9139AF00438E0A /* Extensions.swift */; };
+		4FE080352B913D3800438E0A /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE0802F2B9135EF00438E0A /* UserCell.swift */; };
+		4FE080362B913D4900438E0A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE080322B9139AF00438E0A /* Extensions.swift */; };
 		4FE5A2362B9116FB00469D66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5A2352B9116FB00469D66 /* AppDelegate.swift */; };
 		4FE5A2382B9116FB00469D66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5A2372B9116FB00469D66 /* SceneDelegate.swift */; };
 		4FE5A23F2B9116FD00469D66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FE5A23E2B9116FD00469D66 /* Assets.xcassets */; };
@@ -286,6 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FE080352B913D3800438E0A /* UserCell.swift in Sources */,
+				4FE080362B913D4900438E0A /* Extensions.swift in Sources */,
 				4FE5A2CB2B91245D00469D66 /* PostListViewModel.swift in Sources */,
 				4FE5A24D2B9116FD00469D66 /* QuandooTaskTests.swift in Sources */,
 				4FE0802E2B912DF300438E0A /* Post.swift in Sources */,

@@ -23,18 +23,8 @@ final class QuandooTaskUserViewTests: XCTestCase {
   }
   
   func testEmptyPostListAtInitial() {
-    
+    XCTAssertTrue(controller.tableView.numberOfRows(inSection: 0) == 0)
   }
-  
-  func testLoadPostList() {
-    
-    // condition
-    controller.loadViewIfNeeded()
-    
-    // assert
-    
-  }
-
 }
 
 final class QuandooTaskPostViewTests: XCTestCase {
