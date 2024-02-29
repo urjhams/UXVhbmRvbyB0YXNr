@@ -15,10 +15,10 @@ public class UserListViewModel {
     var address: String
   }
   
-  var item: [UserInfo]
+  var users: [UserInfo]
   
   public init(from model: [User]) {
-    self.item = model.map { user in
+    self.users = model.map { user in
       let address = user.address
       return UserInfo(
         id: user.id,
