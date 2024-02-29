@@ -20,10 +20,10 @@ class UsersViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
+    
     view.backgroundColor = .systemBackground
-    navigationController?.navigationBar.prefersLargeTitles = true
     title = "Users"
+    
     setupTableView()
     fetchData()
   }
@@ -68,9 +68,11 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
     guard let user = viewModel.users[safe: indexPath.row] else {
       return
     }
+    
+    // create the SwiftUI view that be wrapped in a hosting controller
     let postView = PostView(userId: user.id)
     let hostController = UIHostingController(rootView: postView)
-    hostController.title = user.name
+    hostController.title = (user.name.components(separatedBy: " ").first ?? "") + "'s posts"
     navigationController?.pushViewController(hostController, animated: true)
   }
 }

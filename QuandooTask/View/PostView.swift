@@ -2,6 +2,7 @@ import SwiftUI
 
 struct PostView: View {
   
+  /// User id to indicate the posts to load and present
   let userId: Int
   
   @State var model = PostListViewModel()
@@ -19,6 +20,7 @@ struct PostView: View {
     }
     .onAppear {
       Task {
+        // load the model when appear
         model.posts = (try? await FetchingService.shared.getPosts(userId: userId)) ?? []
       }
     }

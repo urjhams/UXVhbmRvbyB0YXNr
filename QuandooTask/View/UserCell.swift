@@ -36,10 +36,13 @@ public final class UserCell: UITableViewCell {
   }()
   
   private func update() {
-    nameLabel.text = model?.name
-    usernameLabel.text = model?.username
-    emailLabel.text = model?.email
-    addressLabel.text = model?.address
+    guard let model else {
+      return
+    }
+    nameLabel.text = "Name: " + model.name
+    usernameLabel.text = "Username: " + model.username
+    emailLabel.text = "Email: " + model.email
+    addressLabel.text = "Address: " + model.address
   }
   
   private func setupLabels() {
