@@ -24,8 +24,6 @@
 		4FE5A2BA2B91227E00469D66 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5A2B92B91227E00469D66 /* User.swift */; };
 		4FE5A2BE2B9122CB00469D66 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5A2BD2B9122CB00469D66 /* UsersViewController.swift */; };
 		4FE5A2C12B91231200469D66 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 4FE5A2C02B91231200469D66 /* Networking */; };
-		4FE5A2C32B91234E00469D66 /* FetchingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5A2C22B91234E00469D66 /* FetchingService.swift */; };
-		4FE5A2C52B9123C700469D66 /* FetchingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5A2C22B91234E00469D66 /* FetchingService.swift */; };
 		4FE5A2C72B91245300469D66 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5A2C62B91245300469D66 /* UserListViewModel.swift */; };
 		4FE5A2C82B91245300469D66 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5A2C62B91245300469D66 /* UserListViewModel.swift */; };
 		4FE5A2CA2B91245D00469D66 /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5A2C92B91245D00469D66 /* PostListViewModel.swift */; };
@@ -57,7 +55,6 @@
 		4FE5A2B72B91227700469D66 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		4FE5A2B92B91227E00469D66 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4FE5A2BD2B9122CB00469D66 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
-		4FE5A2C22B91234E00469D66 /* FetchingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchingService.swift; sourceTree = "<group>"; };
 		4FE5A2C62B91245300469D66 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
 		4FE5A2C92B91245D00469D66 /* PostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,7 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				4FE080342B9139B500438E0A /* Essential */,
-				4FE5A2C42B91235800469D66 /* Services */,
 				4FE5A2B52B91222E00469D66 /* Model */,
 				4FE5A2B42B91221F00469D66 /* View */,
 				4FE5A2B62B91223300469D66 /* ViewModel */,
@@ -158,14 +154,6 @@
 				4FE5A2C92B91245D00469D66 /* PostListViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		4FE5A2C42B91235800469D66 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				4FE5A2C22B91234E00469D66 /* FetchingService.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,7 +262,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FE5A2C32B91234E00469D66 /* FetchingService.swift in Sources */,
 				4FE5A2CA2B91245D00469D66 /* PostListViewModel.swift in Sources */,
 				4FE5A2362B9116FB00469D66 /* AppDelegate.swift in Sources */,
 				4FE5A2C72B91245300469D66 /* UserListViewModel.swift in Sources */,
@@ -299,7 +286,6 @@
 				4FE0802E2B912DF300438E0A /* Post.swift in Sources */,
 				4FE0802B2B912DE800438E0A /* UsersViewController.swift in Sources */,
 				4FE5A2C82B91245300469D66 /* UserListViewModel.swift in Sources */,
-				4FE5A2C52B9123C700469D66 /* FetchingService.swift in Sources */,
 				4FE0802D2B912DF000438E0A /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,7 +16,7 @@ struct PostView: View {
     .onAppear {
       Task {
         // load the model when appear
-        model.posts = (try? await FetchingService.shared.getPosts(userId: userId)) ?? []
+        try? await model.fetchPosts(userId: userId)
       }
     }
   }

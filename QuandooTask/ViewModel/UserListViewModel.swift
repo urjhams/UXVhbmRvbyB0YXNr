@@ -8,6 +8,7 @@
 import Foundation
 import Networking
 
+@MainActor
 public class UserListViewModel {
   public struct UserInfo {
     var id: Int
@@ -17,10 +18,8 @@ public class UserListViewModel {
     var address: String
   }
   
-  @MainActor 
   var users: [UserInfo] = []
   
-  @MainActor
   private func convertedInfo(from user: User) -> UserInfo {
     let address = user.address
     return UserInfo(
@@ -32,19 +31,17 @@ public class UserListViewModel {
     )
   }
   
-  @MainActor 
   public func setUsers(from model: [User]) {
+    print("thread \(Thread.current)")
     users = model.map(convertedInfo)
   }
   
-  @MainActor
   func fetchUsers() async throws -> [UserInfo] {
     let request = Request(from: "https://jsonplaceholder.typicode.com/users", as: .get)
     let users = try await Networking.shared.getObject([User].self, from: request)
     return users.map(convertedInfo)
   }
   
-  @MainActor
   func fetchUserInformations() async throws {
     users = try await fetchUsers()
   }
