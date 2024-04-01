@@ -82,8 +82,7 @@ extension UsersViewController {
   private func fetchData() {
     Task {
       do {
-        let users = try await FetchingService.shared.getUsers()
-        viewModel.setUsers(from: users)
+        try await viewModel.fetchUserInformations()
         tableView.reloadData()
       } catch {
         let alert = UIAlertController(
