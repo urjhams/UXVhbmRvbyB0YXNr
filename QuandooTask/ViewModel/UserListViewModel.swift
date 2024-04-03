@@ -9,7 +9,7 @@ import Foundation
 import Networking
 
 @MainActor
-public class UserListViewModel {
+class UserListViewModel {
   public struct UserInfo {
     var id: Int
     var name: String
@@ -31,7 +31,7 @@ public class UserListViewModel {
     )
   }
   
-  public func setUsers(from model: [User]) {
+  func setUsers(from model: [User]) {
     print("thread \(Thread.current)")
     users = model.map(convertedInfo)
   }

@@ -1,6 +1,6 @@
-public struct Post: Decodable, Identifiable {
-  public var userId: Int
-  public var id: Int
-  public var title: String
-  public var body: String
+struct Post: Decodable, Identifiable {
+  var userId: Int
+  var id: Int
+  var title: String
+  var body: String
 }

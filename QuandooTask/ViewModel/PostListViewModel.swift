@@ -1,7 +1,7 @@
 import SwiftUI
 import Networking
 
-@Observable public class PostListViewModel {
+@Observable class PostListViewModel {
   @MainActor
   var posts: [Post] = []
   

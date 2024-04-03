@@ -7,8 +7,8 @@ struct PostView: View {
   
   @State var model = PostListViewModel()
   
-  @State var showAlert = false
-  @State var alertContent = "This is alert content"
+  @State private var showAlert = false
+  @State private var alertContent = "This is alert content"
   
   var body: some View {
     VStack {
