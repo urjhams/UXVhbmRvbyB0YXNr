@@ -7,16 +7,29 @@ struct PostView: View {
   
   @State var model = PostListViewModel()
   
+  @State var showAlert = false
+  @State var alertContent = "This is alert content"
+  
   var body: some View {
     VStack {
       List(model.posts) { post in
         PostCell(of: post)
       }
     }
+    .alert(.init("Error"), isPresented: $showAlert) {
+      Button { } label: { Text("Ok") }
+    } message: {
+      Text(alertContent)
+    }
     .onAppear {
       Task {
         // load the model when appear
-        try? await model.fetchPosts(userId: userId)
+        do {
+          try await model.fetchPosts(userId: userId)
+        } catch {
+          showAlert.toggle()
+          alertContent = error.localizedDescription
+        }
       }
     }
   }
